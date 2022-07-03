@@ -1,0 +1,126 @@
+.card {
+  background-color: hsl(216, 50%, 16%);
+  padding: 2rem;
+  width: 30rem;
+  border-radius: 1.2rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+
+  &__title {
+    margin-bottom: 2rem;
+    &:link,
+    &:visited {
+      display: inline-block;
+      color: hsl(0, 0%, 100%);
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    &:hover,
+    &:active {
+      color: hsl(178, 100%, 50%);
+    }
+  }
+  &__text {
+    color: hsl(215, 51%, 70%);
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  .specs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-bottom: 2rem;
+    width: 100%;
+    &__content {
+      display: flex;
+      gap: 0.5rem;
+      color: hsl(178, 100%, 50%);
+      font-size: 1.2rem;
+    }
+    &__icon {
+      height: 15px;
+      &--eth {
+        width: 8px;
+      }
+      &--time {
+        width: 15px;
+      }
+    }
+    &__text {
+      &--eth {
+        font-weight: 600;
+      }
+      &--time {
+        color: hsl(215, 51%, 70%);
+      }
+    }
+  }
+  &__avatar {
+    width: 2.5rem;
+    border: 0.7px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+  }
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    &__text {
+      color: hsl(215, 51%, 70%);
+    }
+    &__name {
+      &:link,
+      &:visited {
+        color: hsl(0, 0%, 100%);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      &:hover,
+      &:active {
+        color: hsl(178, 100%, 50%);
+      }
+    }
+  }
+}
+.img-wrap {
+  position: relative;
+  cursor: pointer;
+  &__img {
+    width: 100%;
+    border-radius: 0.6rem;
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26rem;
+    height: 26rem;
+    background: linear-gradient(
+      to right top,
+      hsla(178, 100%, 50%, 0.3),
+      hsla(178, 100%, 50%, 0.6)
+    );
+    border-radius: 1.2rem;
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__icon {
+    position: absolute;
+    width: 3.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover &__overlay,
+  &:hover &__icon {
+    opacity: 1;
+    visibility: visible;
+  }
+}

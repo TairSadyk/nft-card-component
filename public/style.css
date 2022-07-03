@@ -15,6 +15,126 @@ body {
   font-weight: 400;
   font-family: "Outfit", sans-serif;
   box-sizing: border-box;
+  background-color: hsl(217deg, 54%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: hsl(216deg, 50%, 16%);
+  padding: 2rem;
+  width: 30rem;
+  border-radius: 1.2rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+.card__title {
+  margin-bottom: 2rem;
+}
+.card__title:link, .card__title:visited {
+  display: inline-block;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.card__title:hover, .card__title:active {
+  color: hsl(178deg, 100%, 50%);
+}
+.card__text {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.card .specs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215deg, 32%, 27%);
+  padding-bottom: 2rem;
+  width: 100%;
+}
+.card .specs__content {
+  display: flex;
+  gap: 0.5rem;
+  color: hsl(178deg, 100%, 50%);
+  font-size: 1.2rem;
+}
+.card .specs__icon {
+  height: 15px;
+}
+.card .specs__icon--eth {
+  width: 8px;
+}
+.card .specs__icon--time {
+  width: 15px;
+}
+.card .specs__text--eth {
+  font-weight: 600;
+}
+.card .specs__text--time {
+  color: hsl(215deg, 51%, 70%);
+}
+.card__avatar {
+  width: 2.5rem;
+  border: 0.7px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+.card .author {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+.card .author__text {
+  color: hsl(215deg, 51%, 70%);
+}
+.card .author__name:link, .card .author__name:visited {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.card .author__name:hover, .card .author__name:active {
+  color: hsl(178deg, 100%, 50%);
+}
+
+.img-wrap {
+  position: relative;
+  cursor: pointer;
+}
+.img-wrap__img {
+  width: 100%;
+  border-radius: 0.6rem;
+}
+.img-wrap__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26rem;
+  height: 26rem;
+  background: linear-gradient(to right top, hsla(178deg, 100%, 50%, 0.3), hsla(178deg, 100%, 50%, 0.6));
+  border-radius: 1.2rem;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.img-wrap__icon {
+  position: absolute;
+  width: 3.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+}
+.img-wrap:hover .img-wrap__overlay, .img-wrap:hover .img-wrap__icon {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=style.css.map */
