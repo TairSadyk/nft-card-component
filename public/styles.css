@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  position: relative;
+  font-weight: 400;
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  padding: 2rem;
+  width: 30rem;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  border-radius: 1.2rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+.img-wrap {
+  position: relative;
+  cursor: pointer;
+}
+.img-wrap__img {
+  width: 100%;
+  border-radius: 0.6rem;
+}
+.img-wrap__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26rem;
+  height: 26rem;
+  background: linear-gradient(
+    to right top,
+    hsla(178, 100%, 50%, 0.3),
+    hsla(178, 100%, 50%, 0.6)
+  );
+  border-radius: 1.2rem;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.img-wrap__icon {
+  position: absolute;
+  width: 3.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.img-wrap:hover .img-wrap__overlay,
+.img-wrap:hover .img-wrap__icon {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card__title:link,
+.card__title:visited {
+  display: inline-block;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.card__title:hover,
+.card__title:active {
+  color: hsl(178, 100%, 50%);
+}
+.card__text {
+  color: hsl(215, 51%, 70%);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.specs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  padding-bottom: 2rem;
+  width: 100%;
+}
+.price,
+.days-left {
+  display: flex;
+  gap: 0.5rem;
+  color: hsl(178, 100%, 50%);
+  font-size: 1.2rem;
+}
+.price__icon,
+.days-left__icon {
+  width: 8px;
+  height: 15px;
+}
+.price__text {
+  font-weight: 600;
+}
+.days-left {
+  color: hsl(215, 51%, 70%);
+}
+.days-left__icon {
+  width: 15px;
+}
+.days-left__text {
+}
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+.card__avatar {
+  width: 2.5rem;
+  border: 0.7px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+.author__text {
+  color: hsl(215, 51%, 70%);
+}
+.author__name:link,
+.author__name:visited {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.author__name:hover,
+.author__name:active {
+  color: hsl(178, 100%, 50%);
+}
